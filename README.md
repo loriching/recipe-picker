@@ -2,7 +2,7 @@
 
 Submitted by: **Lori Ching**
 
-This web app: **insert description**
+This web app: **allows users to find recipes by searching up the name or by filtering based on certain nutrients. In order to promote healthy attitudes about eating, there is no filter for maximum nutrient limits, only minimums.**
 
 Time spent: **6** hours spent in total
 
