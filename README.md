@@ -43,7 +43,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of the website:
 
-<img src='https://ibb.co/JjZWYtN0' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/loriching/recipe-picker/blob/main/Demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LiceCap
