@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 const SearchBar = ({searchQuery, setSearchQuery}) => {
     return (
         <div>

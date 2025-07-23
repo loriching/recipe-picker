@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react"
-import RecipeRow from "./RecipeRow"
+import RecipeRow from "./RecipeRow";
 
 const parseGrams = (value) => {
     if (typeof value !== "string") return 0;
@@ -41,6 +40,7 @@ const Dashboard = ({ recipes }) => {
                 <th>Carbohydrates (g)</th>
                 <th>Protein (g)</th>
                 <th>Fat (g)</th>
+                <th>View Image</th>
                 </tr>
             </thead>
             <tbody>

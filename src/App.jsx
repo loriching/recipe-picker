@@ -1,11 +1,23 @@
-import { useState, useEffect } from 'react';
 import './App.css';
-import Dashboard from "./components/Dashboard";
-import SearchBar from "./components/SearchBar";
-import FilterControls from "./components/FilterControls";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
+import Header from "./components/Header";
+import Home from "./components/Home";
+import InfoPage from "./components/InfoPage";
+import Details from "./components/Details";
 
 function App() {
+  const NoMatch = () => {
+    return (
+        <>
+            <h3>Sorry, that page doesn't exist!</h3>
+            <p>Click below to return to the home page.</p>
+            <Link to="/">Home</Link>
+        </>
+    );
+  }
+
   const [recipes, setRecipes] = useState(null);
   const [filteredRecipes, setFilteredRecipes] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -57,21 +69,21 @@ function App() {
 
     setFilteredRecipes(filtered);
   }, [recipes, searchQuery, filters]);
+  
 
   return (
-    <>
-      <div className='whole-page'>
-        <h1>Great Recipes!</h1>
+    <> 
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Header />}>
+            <Route index={true} element={<Home searchQuery={searchQuery} setSearchQuery={setSearchQuery} filters={filters} changeFilter ={changeFilter} filteredRecipes={filteredRecipes} />} />
+            <Route index={false} path="/details/:id" element={<Details filteredRecipes={filteredRecipes}/>} />
+            <Route index={false} path="/about" element={<InfoPage />}/>
+          </Route>
+          <Route path="*" element={<NoMatch />}/>
 
-        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
-        <h4>Search for recipes in the searchbar, or use filters to find meals that meet your nutrition goals!</h4>
-        
-
-        <FilterControls filters={filters} changeFilter={changeFilter} />
-        <br></br><br></br>
-
-        {filteredRecipes ? <Dashboard recipes={filteredRecipes}/> : <p>No recipes found.</p>}
-      </div>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

@@ -39,7 +39,6 @@ const FilterControls = ({filters, changeFilter}) => {
             <Slider size="small" min={0} max={40} valueLabelDisplay="auto" value={filters.fiber} onChange={(_, value) => changeFilter("fiber", value)} marks={fortyMarks} sx={{'& .MuiSlider-markLabel': {color: "white", fontSize: '0.8rem'}}}></Slider>
         </>
     );
-    
 }
 
 export default FilterControls;

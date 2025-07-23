@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const RecipeRow = ({recipe}) => {
-    
     return (
         <tr>
             <td>{recipe.title}</td>
@@ -9,8 +8,8 @@ const RecipeRow = ({recipe}) => {
             <td>{recipe.carbs}</td>
             <td>{recipe.protein}</td>
             <td>{recipe.fat}</td>
+            <td><Link to={`/details/${recipe.id}`}>🔗</Link></td>
         </tr>
-
     );
 };
 
