@@ -1,0 +1,27 @@
+body {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type=text] {
+    padding: 9px;
+    border: none;
+    margin: 16px 14px;
+    font-size: 16px;
+    background-color: #9fdcf9;
+    text-align: left;
+    text-indent: 8px;
+    outline: none;
+    color: black;
+    border: 14px solid #447d98;
+    border-radius: 30px;
+}
+
+::placeholder {
+    color: #222266;
+}
+
+.searchbar {
+    margin-top: -6px;
+}

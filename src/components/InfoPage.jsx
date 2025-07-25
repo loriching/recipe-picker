@@ -1,14 +1,16 @@
+import "./InfoPage.css";
+
 const InfoPage = () => {
     return (
-        <div>
+        <div className="info-page">
+            <h1 className="title-text">More Information</h1>
+
             <h2>API used:</h2>
             <p>This website uses the Spoonacular API to find recipes.</p>
-            <br/>
 
             <h2>Purpose:</h2>
             <p>This tool is designed to help people meet their macro nutrient goals, find recipes based on ingredients they want, and develop a healthy relationship with food.</p>
             <p>It is <strong>NOT</strong> (currently) designed to find meals that limit certain nutrients, such as sodium or saturated fat.</p>
-            <br/>
 
             <h2>Health Benefits of the Three Macronutrients:</h2>
             <ul>

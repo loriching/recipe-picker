@@ -1,5 +1,6 @@
 import Typography from '@mui/material/Typography';
 import Slider from '@mui/material/Slider';
+import "./FilterControls.css";
 
 const calMarks = [
     {
@@ -26,6 +27,8 @@ const fortyMarks = [
 const FilterControls = ({filters, changeFilter}) => {
     return (
         <>
+            <div className="slider-font">
+
             <Typography gutterBottom>Minimum Calories</Typography>
             <Slider size="small" min={0} max={2000} valueLabelDisplay="auto" value={filters.calories} onChange={(_, value) => changeFilter("calories", value)} marks={calMarks} sx={{'& .MuiSlider-markLabel': {color: "white", fontSize: '0.8rem'}}}></Slider>
 
@@ -37,6 +40,8 @@ const FilterControls = ({filters, changeFilter}) => {
 
             <Typography gutterBottom>Minimum Fats (g)</Typography>
             <Slider size="small" min={0} max={40} valueLabelDisplay="auto" value={filters.fiber} onChange={(_, value) => changeFilter("fiber", value)} marks={fortyMarks} sx={{'& .MuiSlider-markLabel': {color: "white", fontSize: '0.8rem'}}}></Slider>
+
+            </div>
         </>
     );
 }

@@ -23,6 +23,7 @@ const Details = ({filteredRecipes}) => {
                 <img src={recipe.image} alt={`Image of ${recipe.title}`}></img>
             </div>
 
+            <br></br>
             <h3>Click below to go back</h3>
             <Link to="/">BACK TO DASHBOARD</Link>
         </>

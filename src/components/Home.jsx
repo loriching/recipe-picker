@@ -8,7 +8,7 @@ function Home({searchQuery, setSearchQuery, filters, changeFilter, filteredRecip
   return (
     <>
         <div className='whole-page'>
-          <h1>Great Recipes!</h1>
+          <h1 className="page-title">Great Recipes!</h1>
 
           <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
           <h4>Search for recipes in the searchbar, or use filters to find meals that meet your nutrition goals!</h4>

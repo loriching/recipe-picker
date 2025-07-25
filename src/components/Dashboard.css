@@ -1,0 +1,34 @@
+.graph {
+    background-color: white;
+    margin: 20px;
+    padding-bottom: 6px;
+}
+
+.chart-title {
+    color: black;
+    padding-top: 6px;
+}
+
+.chart-subtitle {
+    color: black;
+    margin-top: -10px;
+}
+
+.statistics-text {
+    border: 3px solid #fe7743;
+    margin: 20px;
+}
+
+.stats-titles {
+    color: #9fdcf9;
+}
+
+.stats-text {
+    margin-top: -8px;
+}
+
+.graph-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
